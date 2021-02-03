@@ -8,6 +8,9 @@ from pyspark.sql.functions import udf
 from pyspark.sql.types import *
 from pyspark.sql import functions as F
 from pyspark.sql import SQLContext
+from common.mysql_operate import db
+
+
 
 SparkSession.builder.config('spark.driver.extraClassPath',
                             'D:/python/flaskDemo/sparkDemo/mysql-connector-java-5.1.46-bin.jar')
@@ -20,13 +23,13 @@ spark = SparkSession.builder \
 sc = spark.sparkContext
 
 host = '127.0.0.1'
-db = 'mydata'
+dbName = 'mydata'
 user = 'root'
 passwd = '123456'
 
 db_url = "jdbc:mysql://%s:3306/%s?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia" \
          "/Shanghai&allowMultiQueries=true&useAffectedRows=true" % (
-             host, db)
+             host, dbName)
 # 读取数据库
 def queryDB(query):
     print(query)
@@ -36,7 +39,6 @@ def queryDB(query):
     # db = 'qcplatform'
     # user = 'root'
     # passwd = 'root1234'
-
 
     df = spark.read.format("jdbc") \
         .option("url", db_url) \
@@ -49,6 +51,18 @@ def queryDB(query):
     df.show()
     print(df.collect)
     return df
+
+# mysql 连接数据库
+def connectionMysql():
+    sql = "select * from proUser"
+    result = db.select_db(sql)
+    df = spark.createDataFrame(result)
+    print(df.printSchema())
+    df.show()
+    rows = df.collect()
+    for i in rows:
+        print(i)
+    df.createOrReplaceTempView("ss")
 
 
 # 测试mysql 连接
@@ -125,4 +139,6 @@ def runSql():
 if __name__ == '__main__':
     # runApi()
     # runSql()
-    testMysql()
+    print("这是%s" % 'aa')
+    # connectionMysql()
+    # testMysql()
