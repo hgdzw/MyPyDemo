@@ -8,6 +8,7 @@ from pyspark.sql.functions import udf
 from pyspark.sql.types import *
 import time
 import datetime
+import json
 
 SparkSession.builder.config('spark.driver.extraClassPath',
                             'D:/python/flaskDemo/sparkDemo/mysql-connector-java-5.1.46-bin.jar')
@@ -157,10 +158,28 @@ def test_time():
     # time_str = time.localtime().tm_min
     # print(time_str2)
 
+def test_time2():
+    begin_date = datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')
+    end_date = datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')
+    print(begin_date[:-1])
+    print(end_date)
+
+    jsonData = '{"a":1,"b":2,"c":3,"d":4,"e":5}'
+
+    text = json.loads(jsonData)
+    print(text)
+
+
+def last_day_of_month(any_day):
+    next_month = any_day.replace(day=28) + datetime.timedelta(days=4)  # this will never fail
+    return next_month - datetime.timedelta(days=next_month.day)
+
 
 if __name__ == '__main__':
+    print(last_day_of_month(datetime.datetime(2021, 1, 1)))
     # runApi()
-    test_time()
+    # test_time()
+    test_time2()
     # print(time_format_3('2020-01-02 01:02:03'))
     # connectionMysql()
     # testMysql()

@@ -7,10 +7,16 @@ from pyspark.sql.functions import udf
 from pyspark.sql.types import *
 import time
 import datetime
+#
+# DB_HOST = '127.0.0.1'
+# DB_USER = 'root'
+# DB_PASS_WORD = '123456'
 
-DB_HOST = '127.0.0.1'
-DB_USER = 'root'
-DB_PASS_WORD = '123456'
+DB_HOST = 'rm-uf696403fz22dmt3f5o.mysql.rds.aliyuncs.com'
+# DB_HOST = '127.0.0.1'
+DB_USER = 'root_dev'
+DB_PASS_WORD = 'Quancheng2020@'
+# DB_PASS_WORD = '123456'
 
 
 SparkSession.builder.config('spark.driver.extraClassPath',
@@ -94,7 +100,7 @@ def read_data():
     ''')
     left_df.coalesce(1).write.json("F:/writeFile/day_df.json")
 
-    get_plan_config_list(site_id,)
+    # get_plan_config_list(site_id,)
 
 
 # 根据厂站 获取指定时间的配置
@@ -158,7 +164,8 @@ def load_data(query, db):
 
 if __name__ == '__main__':
     # runApi()
-    read_data()
+    get_plan_config_list('123d4546', datetime.datetime.now(), datetime.datetime.now() ,2)
+    # read_data()
     # sql = '(select * from philosophy) temp'
     # df = load_data(sql, 'mydata')
     # print(time_format_3('2020-01-02 01:02:03'))
