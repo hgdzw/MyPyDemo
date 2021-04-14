@@ -18,8 +18,8 @@ class HuBeiCarbon:
         pass
 
     def get_url_list(self):
-        # return [self.base_url.format(start) for start in range(1,14,1)]
-        return [self.base_url.format(start) for start in range(1,2,1)]
+        return [self.base_url.format(start) for start in range(1,14,1)]
+        # return [self.base_url.format(start) for start in range(1,2,1)]
 
     def get_html(self,url):
         response = requests.get(url,headers=self.headers)
@@ -33,18 +33,22 @@ class HuBeiCarbon:
         for tr in tr_list[1:]:
             item = {}
             td_list = tr.find_all('li')
-            item["time"] = td_list[1].get_text()
-            item["type"] = td_list[0].get_text()
-            if int(td_list[1].get_text()[:4]) < 2020:
-                break
-            item["count"] = td_list[6].get_text()
-            item["avg"] = '%.2f' %(float(td_list[7].get_text()) / float(td_list[6].get_text()))
-            item["total"] = td_list[7].get_text()
-            items.append(item)
+            try:
+                item["time"] = td_list[1].get_text()
+                item["type"] = td_list[0].get_text()
+                if int(td_list[1].get_text()[:4]) < 2020:
+                    break
+                item["count"] = td_list[6].get_text()
+                item["avg"] = '%.2f' %(float(td_list[7].get_text()) / float(td_list[6].get_text()))
+                item["total"] = td_list[7].get_text()
+                items.append(item)
+            except BaseException as e:
+                print("跳过清洗湖北的某一条数据,数据：{},异常:{}".format(td_list, e))
         return items
 
     def save_item(self,item):
-        print(item)
+        pass
+        # print(item)
 
     def run(self):
         # 1. 获取 url 列表
@@ -69,6 +73,7 @@ class HuBeiCarbon:
             json.dump(all_items,f,ensure_ascii=False,indent=4)
 
         pass
+        return all_items
 
 
 if __name__ == '__main__':

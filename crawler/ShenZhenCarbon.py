@@ -18,8 +18,8 @@ class ShenZhenCarbon:
         pass
 
     def get_url_list(self):
-        # return [self.base_url.format(start) for start in range(1,106,1)]
-        return [self.base_url.format(start) for start in range(1,2,1)]
+        return [self.base_url.format(start) for start in range(1,106,1)]
+        # return [self.base_url.format(start) for start in range(1,2,1)]
 
     def get_html(self,url):
         response = requests.get(url,headers=self.headers)
@@ -47,7 +47,8 @@ class ShenZhenCarbon:
         return items
 
     def save_item(self,item):
-        print(item)
+        pass
+        # print(item)
 
     def run(self):
         # 1. 获取 url 列表
@@ -55,6 +56,8 @@ class ShenZhenCarbon:
 
         all_items = []
         for url in url_list:
+            # 暂停0.5 秒
+            time.sleep(0.3)
             # 2. 发送请求获取html
             html = self.get_html(url)
 
@@ -72,6 +75,7 @@ class ShenZhenCarbon:
             json.dump(all_items,f,ensure_ascii=False,indent=4)
 
         pass
+        return all_items
 
 
 if __name__ == '__main__':

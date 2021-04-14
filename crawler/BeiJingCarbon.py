@@ -31,22 +31,27 @@ class BeiJingCarbon:
             item = {}
             td_list = tr.find_all('td')
             item["time"] = td_list[0].get_text()
-            item["count"] = td_list[1].get_text()
-            item["avg"] = td_list[2].get_text()
+            item["count"] = td_list[1].get_text().replace(',', '')
+            item["avg"] = td_list[2].get_text().replace(',', '')
             item["totalStr"] = td_list[3].get_text()
-            if '(' in td_list[3].get_text():
-                item["type"] = re.findall(re.compile(r'[(](.*?)[)]'), td_list[3].get_text())
-                item["total"] = re.findall(re.compile(r'(.*?)[(]'), td_list[3].get_text())
-
+            if '(' in td_list[3].get_text() and ')' in td_list[3].get_text():
+                item["type"] = re.findall(re.compile(r'[(](.*?)[)]'), td_list[3].get_text())[0]
+                item["total"] = re.findall(re.compile(r'(.*?)[(]'), td_list[3].get_text())[0]
+            elif '(' in td_list[3].get_text() and '）' in td_list[3].get_text():
+                item["type"] = re.findall(re.compile(r'[(](.*?)[）]'), td_list[3].get_text())[0]
+                item["total"] = re.findall(re.compile(r'(.*?)[(]'), td_list[3].get_text())[0]
+            elif '（' in td_list[3].get_text() and ')' in td_list[3].get_text():
+                item["type"] = re.findall(re.compile(r'[（](.*?)[)]'), td_list[3].get_text())[0]
+                item["total"] = re.findall(re.compile(r'(.*?)[（]'), td_list[3].get_text())[0]
             else:
-                item["type"] = re.findall(re.compile(r'[（](.*?)[）]'), td_list[3].get_text())
-                item["total"] = re.findall(re.compile(r'(.*?)[（]'), td_list[3].get_text())
-
+                item["type"] = re.findall(re.compile(r'[（](.*?)[）]'), td_list[3].get_text())[0]
+                item["total"] = re.findall(re.compile(r'(.*?)[（]'), td_list[3].get_text())[0]
             items.append(item)
         return items
 
     def save_item(self,item):
-        print(item)
+        pass
+        # print(item)
 
     def run(self):
         # 1. 获取 url 列表
@@ -62,7 +67,7 @@ class BeiJingCarbon:
 
             # 4. 保存数据
             for item in items:
-                self.   save_item(item)
+                self.save_item(item)
                 all_items.append(item)
                 # break
 

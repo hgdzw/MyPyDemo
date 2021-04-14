@@ -11,7 +11,8 @@ class HttpCrawler:
     def __init__(self):
         self.base_url = "https://www.bjets.com.cn/article/jyxx/?{}"
         self.headers = {
-            "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) "
+                         "Chrome/71.0.3578.98 Safari/537.36"
         }
         pass
 
@@ -24,7 +25,7 @@ class HttpCrawler:
             "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
         }
 
-        response = requests.post(url,headers = hearder,data=xml.encode('utf-8')).text
+        response = requests.post(url, headers=hearder, data=xml.encode('utf-8')).text
 
         items = []
         try:
@@ -55,7 +56,7 @@ class HttpCrawler:
             json.dump(items,f,ensure_ascii=False,indent=4)
 
         pass
-
+        return items
 
     def shanghai_list(self):
         start = 2020

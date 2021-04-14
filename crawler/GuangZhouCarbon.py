@@ -42,7 +42,8 @@ class GuangZhouCarbon:
         return items
 
     def save_item(self,item):
-        print(item)
+        pass
+        # print(item)
 
     def run(self):
         # 1. 获取 url 列表
@@ -67,6 +68,8 @@ class GuangZhouCarbon:
             json.dump(all_items,f,ensure_ascii=False,indent=4)
 
         pass
+        return all_items
+
 
 
 if __name__ == '__main__':
