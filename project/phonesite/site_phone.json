@@ -1,0 +1,15 @@
+[{
+    "site_name": "前程无忧",
+    "method_type": "GET",
+    "url": "https://login.51job.com/ajax/checkinfo.php",
+    "value_key": "value",
+    "payload": {
+        "jsoncallback": "jQuery18305075247167278105_1612773865702",
+        "nation": "CN",
+        "type": "mobile",
+        "_": "1612773891771"
+    },
+    "success": "{result: 1}"
+},{
+
+}]

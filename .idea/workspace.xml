@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36627fe4-c492-45c0-8fea-b33e0c2d46bd" name="Default Changelist" comment="spark 练手项目">
-      <change afterPath="$PROJECT_DIR$/sparkDemo/mysql_operate.py" afterDir="false" />
+    <list default="true" id="36627fe4-c492-45c0-8fea-b33e0c2d46bd" name="Default Changelist" comment="spark 练手项目-2">
+      <change afterPath="$PROJECT_DIR$/project/phonesite/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/phonesite/site_email.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/phonesite/site_phone.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/mysql_operate.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/mysql_operate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkDemo/ChangeHandlerDayDemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparkDemo/ChangeHandlerDayDemo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkDemo/ChangeHandlerDemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparkDemo/ChangeHandlerDemo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkDemo/dataCleanDemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparkDemo/dataCleanDemo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark/jars/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/phonesite/PhoneReight.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark/jars/mysql-connector-java-5.1.46-bin.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sparkDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../buy_pig_plan_python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -58,7 +60,7 @@
       <recent name="D:\python\flaskDemo\apps\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dataCleanDemo">
+  <component name="RunManager" selected="Python.ShenZhenCarbon">
     <configuration name="ChangeHandlerDayDemo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flaskDemo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,6 +95,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sparkDemo/ChangeHandlerDemo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PhoneReight" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flaskDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\pc11\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/phonesite" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/phonesite/PhoneReight.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShenZhenCarbon" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flaskDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\pc11\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawler/ShenZhenCarbon.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,63 +208,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sparkDemo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="flaskDemo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\pc11\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sparkDemo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sparkDemo/sparkDemo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sparkDemo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="flaskDemo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\pc11\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spark" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spark/sparkDemo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.sparkDemo" />
-      <item itemvalue="Python.sparkDemo (1)" />
-      <item itemvalue="Python.dataCleanDemo" />
-      <item itemvalue="Python.ChangeHandlerDemo" />
       <item itemvalue="Python.ChangeHandlerDayDemo" />
+      <item itemvalue="Python.ChangeHandlerDemo" />
+      <item itemvalue="Python.PhoneReight" />
+      <item itemvalue="Python.dataCleanDemo" />
+      <item itemvalue="Python.ShenZhenCarbon" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ShenZhenCarbon" />
+        <item itemvalue="Python.PhoneReight" />
         <item itemvalue="Python.dataCleanDemo" />
         <item itemvalue="Python.ChangeHandlerDayDemo" />
         <item itemvalue="Python.ChangeHandlerDemo" />
-        <item itemvalue="Python.sparkDemo (1)" />
-        <item itemvalue="Python.sparkDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612324487776</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spark 练手项目-2">
+      <created>1612665821882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612665821882</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,7 +282,8 @@
     <MESSAGE value="第一次上传" />
     <MESSAGE value="更新spark 连接数据库" />
     <MESSAGE value="spark 练手项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark 练手项目" />
+    <MESSAGE value="spark 练手项目-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark 练手项目-2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
